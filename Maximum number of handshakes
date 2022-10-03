@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n, total = 0;
+    cout<<"enter number" <<endl;
+    cin>>n;
+    total = n * (n-1)/2;
+    cout<<total<<endl;
+    return 0;
+}
+
+enter number
+15
+105
