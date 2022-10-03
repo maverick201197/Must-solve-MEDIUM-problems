@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int replace(long int n)
+{
+    if(n==0)
+    return 0;
+    int digit = n % 10;
+    if(digit == 0)
+    digit = 1;
+
+    return replace(n/10) * 10 + digit;
+}
+int convert(int n)
+{
+    if(n==0)
+    return 1;
+    else
+    return replace(n);
+}
+int main()
+{
+    int n;
+    cout<<"enter a number" <<endl;
+    cin>>n;
+    cout<<"Number after replacement is : " << convert(n) <<endl;
+    return 0;
+}
+
+enter a number
+201908900
+Number after replacement is : 211918911
