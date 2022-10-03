@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+int fact(int n)
+{
+    int i=1, fact=1;
+    for(i=1; i<=n; i++)
+    {
+        fact = fact * i;
+    }
+    return fact;
+}
+int main()
+{
+    int r, p, n, temp, num, den;
+    cout<<"enter the number of seats" <<endl;
+    cin>>r;
+    cout<<"enter the number of people" <<endl;
+    cin>>n;
+    if(n<r)
+    {
+        temp = n;
+        n = r;
+        r = temp;
+    }
+    num = fact(n);
+    den = fact(n-r);
+    p = num/den;
+    cout<<"Number of ways people can be seated is : " <<" " << p << endl;
+    return 0;
+    
+}
+
+
+enter the number of seats
+5
+enter the number of people
+3
+Number of ways people can be seated is :  60
