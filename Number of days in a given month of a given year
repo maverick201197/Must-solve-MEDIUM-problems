@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int year, month;
+    cout<<"enter the year and the month" <<endl;
+    cin>>year>>month;
+    if(month==1 || month==3 || month==5 || month==7 || month==9 || month==11)
+    {
+        cout<<"31 days"<<endl;
+    }
+    else if((month==2) &&(year%400==0) || (year%4==0) && (year%100!=0))
+    {
+        cout<<"29 days" <<endl;
+    }
+    else if(month==2)
+    {
+        cout<<"28 days" <<endl;
+    }
+    else
+    {
+        cout<<"30 days" <<endl;
+    }
+    return 0;
+}
+
+enter the year and the month
+1996 3
+31 days
