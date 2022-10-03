@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int dectobin(int decimal)
+{
+    int binary = 0, rem, i = 1;
+    while(decimal!=0)
+    {
+        rem = decimal % 2;
+        binary = binary + rem * i;
+        decimal = decimal / 2;
+        i = i * 10;
+    }
+    return binary;
+}
+int main()
+{
+    int decimal;
+    cout<<"enter a decimal number" <<endl;
+    cin>>decimal;
+    cout<<dectobin(decimal);
+    return 0;
+}
+
+enter a decimal number
+255
+11111111
