@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,b;
+    cout<<"enter two numbers" <<endl;
+    cin>>a>>b;
+    if(a>0 && b>0)
+    cout<<"First Quadrant" <<endl;
+    else if(a<0 && b>0)
+    cout<<"Second Quadrant" <<endl;
+    else if(a<0 && b<0)
+    cout<<"Third Quadrant" <<endl;
+    else if(a>0 && b<0)
+    cout<<"Fourth Quadrant" << endl;
+    else
+    cout<<"Origin" << endl;
+    return 0;
+}
+
+enter two numbers
+5 4
+First Quadrant
