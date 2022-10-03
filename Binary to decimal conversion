@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int bintodec(int binary)
+{
+    int decimal = 0, rem, i = 0;
+    while(binary!=0)
+    {
+        rem = binary % 10;
+        binary = binary / 10;
+        decimal = decimal + rem * pow(2,i);
+        i++;
+    }
+    return decimal;
+}
+int main()
+{
+    int binary;
+    cout<<"enter a binary number" <<endl;
+    cin>>binary;
+    cout<<bintodec(binary);
+    return 0;
+}
+
+enter a binary number
+111
+7
