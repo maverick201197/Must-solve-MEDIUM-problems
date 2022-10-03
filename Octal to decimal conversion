@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int octaltodecimal(int octal)
+{
+    int decimal = 0, rem, i = 0;
+    while(octal!=0)
+    {
+        rem = octal % 10;
+        octal = octal / 10;
+        decimal = decimal + rem * pow(8,i);
+        i++;
+    }
+    return decimal;
+}
+int main()
+{
+    int octal;
+    cout<<"enter an octal number" <<endl;
+    cin>>octal;
+    cout<<octaltodecimal(octal);
+    return 0;
+}
+
+enter an octal number
+2341
+1249
